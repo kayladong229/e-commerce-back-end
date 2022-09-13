@@ -7,8 +7,7 @@ router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
   Category.findAll({
-    include:
-      { 
+    include: { 
         model: Product,
         attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
       }
@@ -33,24 +32,23 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    include:
-      { 
-        model: Product,
-        attributes: ['id', 'product_name','price', 'stock', 'category_id']
-      }
-    })
-    .then(dbCategoryData => {
-      if (!dbCategoryData) {
-        res.status(404).json({message: "Category not found."});
-        return;
-      }
-      res.json(dbCategoryData);
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    include: { 
+      model: Product,
+      attributes: ['id', 'product_name','price', 'stock', 'category_id']
+    }
   })
+  .then(dbCategoryData => {
+    if (!dbCategoryData) {
+      res.status(404).json({message: "No category found with this ID."});
+      return;
+    }
+    res.json(dbCategoryData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
 
 router.post('/', (req, res) => {
   // create a new category
