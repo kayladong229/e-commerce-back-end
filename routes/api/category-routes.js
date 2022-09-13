@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
         res.status(404).json({message: "Category not found."});
         return;
       }
-    res.json(dbCategoryData);
+      res.json(dbCategoryData);
     })
     .catch(err => {
       console.log(err);
