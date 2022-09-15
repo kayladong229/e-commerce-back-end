@@ -10,4 +10,4 @@ Insomnia screenshots:
 ![Application Preview 1 - Insomnia](./Assets/Screen%20Shot%202022-09-13%20at%202.25.34%20PM.png)
 ![Application Preview 1 - Insomnia](./Assets/Screen%20Shot%202022-09-13%20at%202.26.01%20PM.png)
 
-Tutorial link: https://drive.google.com/file/d/1peGFUPvbdN5X5ccKtN_Wwc4AhnehPxhu/view
+Tutorial link: https://drive.google.com/file/d/11xiWEWijbgKBNbGVxbFe3917YuC1fnvz/view
